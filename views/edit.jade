@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  img(src="#{picture.url}" class="singlePhoto")
+  h1(id="editPhotoHeader") Edit a Photo
+  div(id="editForm")
+    form(action="/gallery", type="submit", method="PUT" id="addInput")
+      input(name="author", type="text", placeholder="  #{picture.author}" id="author")
+      input(name="link", type="text", placeholder="  #{picture.url}" id="link")
+      input(name="description", type="textarea", placeholder="  #{picture.description}" id="description")
+      button(id="addPhoto") Edit Photo
+    a(href="/")
+      button(id="takeMeBack") Never mind. Take me back to the Gallery...

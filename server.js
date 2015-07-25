@@ -49,6 +49,19 @@ app.get('/new_photo', function (req, res) {
   res.render('new_photo');
 });
 
+//edit photo form
+app.get('/gallery/:id/edit', function (req, res) {
+  models.Photo
+    .findById(req.params.id)
+    .then(function (picture) {
+      // console.log(pictures)
+      res.render('edit', { "picture": picture });
+    });
+});
+
+//edit form PUT
+//app.put('/gallery/:id/edit', function (req, res) {
+
 //form submission
 app.post('/gallery', function (req, res, next) {
     models.Photo.create ({
