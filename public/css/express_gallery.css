@@ -1,0 +1,163 @@
+* {
+  margin-left: 5px;
+  font-family: Lucida Console;
+}
+
+body {
+  /*background-image: url("/ref/cameraBG.jpg");
+  position: static;
+  /*background-size: cover;*/
+/*  width: 100vw;
+  height: 100vw;*/
+}
+
+@font-face {
+  font-family: 'CartoonRelief'
+  src:('ref/CartoonRelief.ttf');
+}
+
+#background {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  margin-left: -10px;
+  margin-top: -100px;
+  /*height: 100vw;*/
+}
+
+h1 {
+  font-family: 'CartoonRelief';
+  font-size: 110px;
+  color: white;
+}
+
+#indexHeader {
+  margin-top: 80px;
+  margin-left: 20px;
+  position: fixed;
+}
+
+#newPhotoHeader {
+  margin-top: 200px;
+  margin-left: 525px;
+  position: fixed;
+}
+
+h3 {
+  font-family: 'CartoonRelief';
+  font-size: 30px;
+  color: white;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-top: 50px;
+  position: fixed;
+}
+
+p {
+  color: black;
+  font-family: Lucida Console;
+  margin: 5px;
+}
+
+#addButton {
+  margin-top: 675px;
+  margin-left: 50px;
+  position: fixed;
+}
+
+.viewButton {
+  float: right;
+  margin-top: 5px;
+}
+
+.editButton {
+  float: right;
+  margin-top: 5px;
+}
+
+.deleteButton {
+  float: right;
+  margin-top: 5px;
+  margin-right: 10px;
+}
+
+form, input {
+  width: 600px;
+}
+
+input {
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-bottom: 5px;
+}
+
+button {
+  width: 605px;
+  font-size: 15px;
+}
+input, button {
+  height: 30px;
+}
+
+#description {
+  height: 60px;
+}
+
+#leftDiv {
+  float: left;
+}
+
+#rightDiv {
+  float: right;
+  margin-right: 50px;
+}
+
+.photoDiv {
+  /*background-color: white;*/
+  background: rgba(255, 255, 255, 0.8);
+  /*opacity: 0.5;*/
+  /*height: 100%;*/
+  display: flex-wrap;
+  width: 460px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  visibility: hidden;
+  font-size: 5px;
+}
+
+.photo {
+  width: 450px;
+  margin-top: 10px;
+}
+
+/*--add New Photo form---*/
+
+#addForm {
+  /*position: static;*/
+  float: right;
+  margin-top: 350px;
+  margin-right: 250px;
+}
+
+#addInput {
+
+}
+
+#addPhoto {
+  height: 50px;
+  font-size: 30px;
+  background-color: yellow;
+  border: 2px solid black;
+  border-radius: 25px;
+  margin-top: 10px;
+}
+
+#takeMeBack {
+  margin-left: 5px;
+  margin-top: 10px;
+  background-color: #C89901;
+  border: 2px solid black;
+  border-radius: 25px;
+}

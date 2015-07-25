@@ -1,0 +1,37 @@
+{
+  "name": "Express-Gallery",
+  "version": "1.0.0",
+  "description": "Express Gallery ===============",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "bower": "^1.4.1",
+    "expres": "0.0.5",
+    "express": "^4.13.1",
+    "foundation": "^4.2.1-1",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.4",
+    "pg": "^4.4.0",
+    "pg-hstore": "^2.3.2",
+    "sass": "^0.5.0",
+    "sequelize": "^3.4.1"
+  },
+  "devDependencies": {
+    "faker": "^3.0.0",
+    "morgan": "^1.6.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rcgmcloud/Express-Gallery.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rcgmcloud/Express-Gallery/issues"
+  },
+  "homepage": "https://github.com/rcgmcloud/Express-Gallery"
+}
