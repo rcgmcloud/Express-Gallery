@@ -17,8 +17,9 @@ block content
             img(src="ref/view_button_1.png" class="viewButton")
           a(href="/gallery/" + picture.id + "/edit" class="butt")
             img(src="ref/edit_button_1.png" class="editButton")
-          form(id="deleteForm" action="/gallery/#{picture.id}" method="POST")
-            img(
-              src="ref/delete_button_1.png"
-              class="deleteButton")
+          form(class="deleteForm" action="/gallery/#{picture.id}" method="POST")
+            button(type="submit")
+              img(
+                src="ref/delete_button_1.png"
+                class="deleteButton")
             input(type="hidden" name="_method" value="DELETE")

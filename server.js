@@ -102,9 +102,14 @@ app.delete('/gallery/:id', function (req, res, next) {
   models.Photo
     .findById(req.params.id)
     .then(function(photo){
-      photo.destroy();
+      return photo.destroy();
+    })
+    .then(function(){
+      res.redirect('/');
     })
   ;
+
+
 });
 
 //server using sequelize
