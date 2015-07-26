@@ -49,6 +49,30 @@ app.get('/new_photo', function (req, res) {
   res.render('new_photo');
 });
 
+//edit form PUT
+app.put('/gallery/:id/edit', function (req, res) {
+  console.log(req.body);
+  models.Photo
+    .findById(req.params.id)
+    .then(function (picture) {
+      if (req.body.author) {
+        picture.author = req.body.author;
+      }
+      if (req.body.link) {
+        picture.url = req.body.link;
+      }
+      if (req.body.description) {
+        picture.description = req.body.description;
+      }
+      return picture.updateAttributes({author: picture.author, description: picture.description, url: picture.url});
+      //.save();
+    })
+    .then(function(picture){
+      res.render('gallery', { "picture": picture });
+    });
+
+});
+
 //edit photo form
 app.get('/gallery/:id/edit', function (req, res) {
   models.Photo
@@ -59,8 +83,6 @@ app.get('/gallery/:id/edit', function (req, res) {
     });
 });
 
-//edit form PUT
-//app.put('/gallery/:id/edit', function (req, res) {
 
 //form submission
 app.post('/gallery', function (req, res, next) {

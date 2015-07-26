@@ -4,7 +4,8 @@ html
     meta(charset="UTF-8")
     title Express Gallery
     link(href="/css/express_gallery.css" rel="stylesheet" type="text/css")
-    <script src="/js/script.js"></script>
-  body
+    script(src="/js/script.js")
+  body(class="clearfix")
     img(id="background" src="/ref/danbo-box-camera.jpg")
-    block content
+    div(id="overlay" class="clearfix")
+      block content
