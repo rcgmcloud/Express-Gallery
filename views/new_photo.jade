@@ -3,7 +3,7 @@ extends layout
 block content
   h1(id="newPhotoHeader") Add a New Photo
   div(id="addForm")
-    form(action="/gallery", type="submit", method="POST" id="addInput")
+    form(action="/gallery", method="POST" id="addInput")
       input(name="author", type="text", placeholder="  author" id="author")
       input(name="link", type="text", placeholder="  link" id="link")
       input(name="description", type="textarea", placeholder="  description" id="description")

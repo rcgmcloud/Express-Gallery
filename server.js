@@ -80,20 +80,32 @@ app.get('/gallery/:id/edit', function (req, res) {
     .then(function (picture) {
       // console.log(pictures)
       res.render('edit', { "picture": picture });
-    });
+    })
+  ;
 });
 
 
 //form submission
 app.post('/gallery', function (req, res, next) {
-    models.Photo.create ({
+  models.Photo
+    .create ({
       author: req.body.author,
       description: req.body.description,
       url: req.body.link
-    });
+    })
+  ;
   res.redirect('/');
 });
 
+//delete
+app.delete('/gallery/:id', function (req, res, next) {
+  models.Photo
+    .findById(req.params.id)
+    .then(function(photo){
+      photo.destroy();
+    })
+  ;
+});
 
 //server using sequelize
 models.sequelize
