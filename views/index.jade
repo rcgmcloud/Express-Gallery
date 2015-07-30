@@ -2,14 +2,16 @@ extends layout
 
 block content
   div(id="leftDiv")
-    h3 WELCOME TO
-    h1(id="indexHeader") Express Gallery
+    img(src="ref/indexHeader.png" id="indexHeader")
+    //- h3 WELCOME TO
+    //- h1(id="indexHeader" class="selector") Express Gallery
     a(href="/new_photo")
       img(src="ref/add_button_1.png" id="addButton")
   div(id="rightDiv")
     each picture in pictures
       div(class="photoDiv" id=picture.id)
-        img(src="#{picture.url}" class="photo")
+        a(href="/gallery/" + picture.id)
+          img(src="#{picture.url}" class="photo")
         p Author: #{picture.author}
         p Description: #{picture.description}
         div(class="buttonsDiv clearfix")

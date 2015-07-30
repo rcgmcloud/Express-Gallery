@@ -17,4 +17,4 @@ models.sequelize
     });
     }
     return Photo.bulkCreate(gallery);
-  });
+});

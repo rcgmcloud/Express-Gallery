@@ -1,12 +1,13 @@
 extends layout
 
 block content
-  h1(id="newPhotoHeader") Add a New Photo
+  img(src="/ref/newPhotoHeader.png" id="newPhotoHeader")
+  //- h1(id="newPhotoHeader") Add a New Photo
   div(id="addForm")
     form(action="/gallery", method="POST" id="addInput")
       input(name="author", type="text", placeholder="  author" id="author")
       input(name="link", type="text", placeholder="  link" id="link")
       input(name="description", type="textarea", placeholder="  description" id="description")
-      button(id="addPhoto") Add Photo
+      button(id="addPhoto") ADD PHOTO
     a(href="/")
-      button(id="takeMeBack") Never mind. Take me back to the Gallery...
+      button(id="takeMeBack") BACK

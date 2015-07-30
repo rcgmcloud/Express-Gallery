@@ -1,9 +1,11 @@
 extends layout
 
 block content
-  h1 SINGLE IMAGE!!
-  p Author: #{picture.author}
-  p Description: #{picture.description}
-  img(src="#{picture.url}")
+  //- h1 SINGLE IMAGE!!
+  div(id="singleContainer")
+    a(href="/")
+      img(src="#{picture.url}" id="singleImage")
+    p(class="singleText") Author: #{picture.author}
+    p(class="singleText") Description: #{picture.description}
   a(href="/")
-      button(id="takeMeBack") Back
+      button(id="takeMeBackSingle") BACK

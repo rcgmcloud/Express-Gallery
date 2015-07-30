@@ -99,17 +99,19 @@ app.post('/gallery', function (req, res, next) {
 
 //delete
 app.delete('/gallery/:id', function (req, res, next) {
-  models.Photo
-    .findById(req.params.id)
-    .then(function(photo){
-      return photo.destroy();
-    })
-    .then(function(){
-      res.redirect('/');
-    })
-  ;
-
-
+  //var result = confirm("Are you sure you want to delete this photo?");
+  // if(result){
+    models.Photo
+      .findById(req.params.id)
+      .then(function(photo){
+        return photo.destroy();
+      })
+      .then(function(){
+        return res.redirect('/');
+      })
+    ;
+    // return res.redirect('/');
+  // }
 });
 
 //server using sequelize
